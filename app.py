@@ -50,10 +50,10 @@ if user_query:
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         stored_data = f.read()
 
-    # إرسال السؤال مع معلومات المستخدم إلى عقل Llama 3 السريع عبر Groq
+    # إرسال السؤال مع معلومات المستخدم إلى عقل Llama 3 الحديث عبر Groq
     try:
         chat_completion = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[
                 {
                     "role": "system",
