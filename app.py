@@ -7,8 +7,8 @@ st.set_page_config(page_title="HERMES AI", page_icon="🪽", layout="centered")
 st.markdown("<style>body {direction: rtl; text-align: right;} .stTextInput>div>div>input {direction: rtl;} .stTextArea>div>div>textarea {direction: rtl;}</style>", unsafe_allow_html=True)
 st.title("🪽 HERMES AI")
 
-# مفتاح التشغيل
-GROQ_API_KEY = "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"
+# مفتاح التشغيل الجديد
+GROQ_API_KEY = "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"
 client = Groq(api_key=GROQ_API_KEY)
 
 # ملف حفظ الذاكرة والمعلومات
@@ -50,10 +50,10 @@ if user_query:
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         stored_data = f.read()
 
-    # إرسال السؤال مع معلومات المستخدم إلى عقل Llama 3 عبر Groq
+    # إرسال السؤال باستخدام نموذج Gemma السريع والمستقر تماماً على كل الحسابات المجانية
     try:
         chat_completion = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="gemma2-9b-it",
             messages=[
                 {
                     "role": "system",
