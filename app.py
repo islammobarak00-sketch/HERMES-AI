@@ -5,7 +5,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import SKLearnVectorStore
 from langchain_groq import ChatGroq
-from langchain.chains import RetrievalQA
+from langchain.chains.retrieval_qa.base import RetrievalQA
 
 # تصميم الواجهة
 st.set_page_config(page_title="HERMES AI", page_icon="🪽", layout="centered")
